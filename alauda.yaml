@@ -5,7 +5,7 @@ steps:
         container: tools
         groovy:
           - |+
-            sh 'git clone https://github.com/travelaudience/docker-nexus.git && cd docker-neuxs && git checkout -b buildimage v3.17.0'
+            sh 'git clone https://github.com/travelaudience/docker-nexus.git &&  git checkout -b buildimage v3.17.0'
             sh 'mv docker-neuxs/* .'
             deploy.BuildMultiArchImage(
                registry: "armharbor.alauda.cn",
